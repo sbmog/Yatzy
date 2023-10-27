@@ -152,6 +152,27 @@ public class YatzyResultsCalculatorTests {
     }
 
     @Test
+    public void largeStraightScoreTests() {
+        YatzyResultCalculator sut = new YatzyResultCalculator(new Die[]{
+                new Die(4),
+                new Die(2),
+                new Die(3),
+                new Die(5),
+                new Die(1) }
+        );
+        int actual = sut.largeStraightScore();
+        assertEquals(0, actual, "A throw without a large straight, should return 0");
+        sut = new YatzyResultCalculator(new Die[]{
+                new Die(4),
+                new Die(2),
+                new Die(3),
+                new Die(5),
+                new Die(6) }
+        );
+        actual = sut.largeStraightScore();
+        assertEquals(20, actual, "A throw with a large straight, should return 15");
+    }
+    @Test
     public void fullHouseScoreTests() {
         YatzyResultCalculator sut = new YatzyResultCalculator(new Die[]{
                 new Die(6),
