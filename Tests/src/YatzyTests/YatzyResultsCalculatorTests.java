@@ -129,5 +129,36 @@ public class YatzyResultsCalculatorTests {
         assertEquals(18, actual, "A throw with more than four of a kind, should only return the value of four dice");
     }
 
+    @Test
+    public void fullHouseScoreTests() {
+        YatzyResultCalculator sut = new YatzyResultCalculator(new Die[]{
+                new Die(6),
+                new Die(1),
+                new Die(3),
+                new Die(4),
+                new Die(3) }
+        );
+        int actual = sut.fullHouseScore();
+        assertEquals(0, actual, "A throw without full house, should return a score of 0");
+        sut = new YatzyResultCalculator(new Die[]{
+                new Die(6),
+                new Die(3),
+                new Die(3),
+                new Die(6),
+                new Die(3) }
+        );
+        actual = sut.fullHouseScore();
+        assertEquals(21, actual, "A throw with full house, should return the total of the eyes used");
+        sut = new YatzyResultCalculator(new Die[]{
+                new Die(6),
+                new Die(6),
+                new Die(6),
+                new Die(6),
+                new Die(6) }
+        );
+        actual = sut.fullHouseScore();
+        assertEquals(0, actual, "A throw of five of a kind is not a full house");
+    }
+
 
 }
