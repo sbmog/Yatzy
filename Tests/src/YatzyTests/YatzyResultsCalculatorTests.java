@@ -209,6 +209,25 @@ public class YatzyResultsCalculatorTests {
         int actual = sut.chanceScore();
         assertEquals(17, actual, "A chance score should be the sum of the eyes of all dice");
     }
-
-
+    @Test
+    public void yatzyScoreTests() {
+        YatzyResultCalculator sut = new YatzyResultCalculator(new Die[]{
+                new Die(6),
+                new Die(1),
+                new Die(3),
+                new Die(4),
+                new Die(3) }
+        );
+        int actual = sut.chanceScore();
+        assertEquals(0, actual, "A throw without five of a kind, should return 0");
+        sut = new YatzyResultCalculator(new Die[]{
+                new Die(1),
+                new Die(1),
+                new Die(1),
+                new Die(1),
+                new Die(1) }
+        );
+        actual = sut.yatzyScore();
+        assertEquals(50, actual, "A throw with five of a kind, should return 50");
+    }
 }

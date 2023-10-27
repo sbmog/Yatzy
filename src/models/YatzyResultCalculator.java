@@ -52,4 +52,8 @@ public class YatzyResultCalculator {
         return 0;
     }
 
+    public int yatzyScore() {
+        return 0;
+    }
+
 }
