@@ -18,6 +18,6 @@ public class Die {
     }
 
     public void roll() {
-
+        //TODO: implement roll method.
     }
 }
