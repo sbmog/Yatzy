@@ -85,6 +85,7 @@ public class YatzyResultsCalculatorTests {
                 new Die(4),
                 new Die(3) }
         );
+        actual = sut.threeOfAKindScore();
         assertEquals(9, actual, "A throw with three of a kind, should return the total of the eyes used");
         sut = new YatzyResultCalculator(new Die[]{
                 new Die(6),
@@ -93,7 +94,8 @@ public class YatzyResultsCalculatorTests {
                 new Die(6),
                 new Die(6) }
         );
-        assertEquals(18, actual, "A throw with more than three of a kind, should only return the value of three die");
+        actual = sut.threeOfAKindScore();
+        assertEquals(18, actual, "A throw with more than three of a kind, should only return the value of three dice");
     }
 
     @Test
@@ -115,7 +117,16 @@ public class YatzyResultsCalculatorTests {
                 new Die(3) }
         );
         actual = sut.fourOfAKindScore();
-
+        assertEquals(12, actual, "A throw with four of a kind, should return the total of the eyes used");
+        sut = new YatzyResultCalculator(new Die[]{
+                new Die(6),
+                new Die(6),
+                new Die(6),
+                new Die(6),
+                new Die(6) }
+        );
+        actual = sut.fourOfAKindScore();
+        assertEquals(18, actual, "A throw with more than four of a kind, should only return the value of four dice");
     }
 
 
