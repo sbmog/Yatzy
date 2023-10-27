@@ -36,7 +36,11 @@ public class YatzyResultCalculator {
         return 0;
     }
 
-    public int smallStraitScore() {
+    public int smallStraightScore() {
+        return 0;
+    }
+
+    public int largeStraightScore() {
         return 0;
     }
 
