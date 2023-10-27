@@ -130,6 +130,28 @@ public class YatzyResultsCalculatorTests {
     }
 
     @Test
+    public void smallStraitScoreTests() {
+        YatzyResultCalculator sut = new YatzyResultCalculator(new Die[]{
+                new Die(6),
+                new Die(1),
+                new Die(3),
+                new Die(4),
+                new Die(3) }
+        );
+        int actual = sut.smallStraitScore();
+        assertEquals(0, actual, "A throw without a small strait, should return 0");
+        sut = new YatzyResultCalculator(new Die[]{
+                new Die(4),
+                new Die(2),
+                new Die(3),
+                new Die(5),
+                new Die(1) }
+        );
+        actual = sut.smallStraitScore();
+        assertEquals(0, actual, "A throw with a small strait, should return 15");
+    }
+
+    @Test
     public void fullHouseScoreTests() {
         YatzyResultCalculator sut = new YatzyResultCalculator(new Die[]{
                 new Die(6),

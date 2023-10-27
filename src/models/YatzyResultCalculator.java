@@ -36,6 +36,10 @@ public class YatzyResultCalculator {
         return 0;
     }
 
+    public int smallStraitScore() {
+        return 0;
+    }
+
     public int fullHouseScore() {
         return 0;
     }
