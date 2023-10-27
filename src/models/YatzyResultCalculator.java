@@ -48,4 +48,8 @@ public class YatzyResultCalculator {
         return 0;
     }
 
+    public int chanceScore() {
+        return 0;
+    }
+
 }
