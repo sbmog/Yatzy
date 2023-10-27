@@ -123,7 +123,7 @@ public class YatzyResultsCalculatorTests {
                 new Die(6) }
         );
         actual = sut.fourOfAKindScore();
-        assertEquals(18, actual, "A throw with more than four of a kind, should only return the value of four dice");
+        assertEquals(24, actual, "A throw with more than four of a kind, should only return the value of four dice");
     }
     @Test
     public void smallStraightScoreTests() {
@@ -144,7 +144,7 @@ public class YatzyResultsCalculatorTests {
                 new Die(1) }
         );
         actual = sut.smallStraightScore();
-        assertEquals(0, actual, "A throw with a small straight, should return 15");
+        assertEquals(15, actual, "A throw with a small straight, should return 15");
     }
     @Test
     public void largeStraightScoreTests() {
@@ -218,7 +218,7 @@ public class YatzyResultsCalculatorTests {
                 new Die(4),
                 new Die(3) }
         );
-        int actual = sut.chanceScore();
+        int actual = sut.yatzyScore();
         assertEquals(0, actual, "A throw without five of a kind, should return 0");
         sut = new YatzyResultCalculator(new Die[]{
                 new Die(1),

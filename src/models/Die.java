@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Die {
     private int eyes = 0;
+    private final Random random = new Random();
 
     /**
      * Creates a new Die object, with face set to eyes. Used for test purpose
@@ -16,7 +17,6 @@ public class Die {
     public Die() {
     }
 
-    private final Random random = new Random();
     public void roll() {
 
     }
