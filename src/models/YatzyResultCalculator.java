@@ -67,5 +67,4 @@ public class YatzyResultCalculator {
         //TODO: implement yatzyScore method.
         return 0;
     }
-
 }
