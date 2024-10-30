@@ -4,11 +4,15 @@ public class RaffleCup {
     private Die[] dice = new Die[5];
 
     public RaffleCup() {
-        //TODO: Create an instance of RaffleCup.
+        throwDice();
     }
 
     public void throwDice() {
-        //TODO: implement throwDice method.
+        for (int index = 0; index < dice.length; index++) {
+            Die die = new Die();
+            die.roll();
+            dice[index] = die;
+        }
     }
 
     public Die[] getDice() {

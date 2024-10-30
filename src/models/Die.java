@@ -15,9 +15,14 @@ public class Die {
     }
 
     public Die() {
+        roll();
     }
 
     public void roll() {
-        //TODO: implement roll method.
+        eyes = random.nextInt(6)+1;
+    }
+
+    public int getDie(){
+        return eyes;
     }
 }
