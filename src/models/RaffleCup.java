@@ -7,6 +7,7 @@ public class RaffleCup {
         throwDice();
     }
 
+//    opretter 5 nye terninger, og gemmer dette i Arrayet
     public void throwDice() {
         for (int index = 0; index < dice.length; index++) {
             Die die = new Die();
