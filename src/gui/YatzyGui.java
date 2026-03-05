@@ -43,10 +43,10 @@ public class YatzyGui extends Application {
 //        sæt stilen til pane, der bliver der sat en kant på, som er sort og tilføjet padding i kanterne
         dicePane.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-padding: 10;");
 
-//        Dicelabels og checkbox hertil bliver tilføjet, placeres íft. Indekset
+//        Dice labels og checkbox hertil bliver tilføjet, placeres íft. Indekset
         for (int indeks = 0; indeks < 5; indeks++) {
             diceLabels[indeks] = new Label("" + 0);
-//            stilen sættes til label, skriftstr, kantfarve (mørke grå), padding, bredde, allingment og afrundedekanter
+//            stilen sættes til label, skriftstr., kantfarve (mørke grå), padding, bredde, alignment og afrundedekanter
             diceLabels[indeks].setStyle("-fx-font-size: 18; -fx-border-color: darkGray; -fx-padding: 10; -fx-min-width: 50; -fx-alignment: center; -fx-border-radius: 10;");
             dicePane.add(diceLabels[indeks], indeks, 0);
 
@@ -54,7 +54,7 @@ public class YatzyGui extends Application {
             dicePane.add(diceCheckBoxes[indeks], indeks, 1);
         }
 
-//        tilføj rollcount label
+//        tilføj roll count label
         dicePane.add(rollCountLabel, 0, 2, 2, 1);
 
 //        tilføj roll button og der kaldes på handling, hvis knappen bliver trykket på
@@ -139,7 +139,7 @@ public class YatzyGui extends Application {
         primaryStage.show();
     }
 
-//    metode til når der bliver trykket på rollButton. terningerne bliver kastet
+//    Metode til når der bliver trykket på rollButton. Terningerne bliver kastet
     private void rollDice() {
 //        knappen vil kun udløse nedenstående, hvis man har flere kast tilbage
         if (rollCount > 0) {
